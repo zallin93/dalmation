@@ -1,0 +1,17 @@
+@import 'components.scss';
+
+.down-arrow {
+    display: inline-block;
+    
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-top: 0.2em solid #000;
+        border-right: 0.2em solid #000;
+        -moz-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }    
+}

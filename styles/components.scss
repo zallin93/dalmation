@@ -1,0 +1,225 @@
+
+.dal-input-file {
+    input {
+        display: block;
+    }
+}
+
+.dal-textarea textarea, .dal-input input, .dal-select .input-div, .dal-select input, .dal-input-date input {
+    width: 100%;  
+    width: -moz-available;
+    width: -webkit-fill-available;  
+    border-radius: 5px;
+    border: 1px solid #9e9e9e;
+    padding: 5px;
+    font-size: 14px;
+
+    &:disabled {
+        background-color: #efefef;
+        cursor: not-allowed;
+    }
+}
+
+.dal-input-date input {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dal-input, .dal-radio, .dal-select, .dal-input-date, .dal-input-file, 
+    .dal-file-attacher {
+    padding: 3px;
+}
+
+.dal-select, .dal-input, .dal-radio, .dal-textarea, .dal-input-date, .dal-input-file, 
+    .dal-file-attacher {
+    label {
+        padding-bottom: 2px;
+    }
+}
+
+.dal-input-date.invalid input {
+    border: 2px solid red;
+}
+
+.dal-button {
+    padding: 5px;
+    button {
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background-color: #007bff; // blue 
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+        }    
+    }
+
+    &.submit button {
+        background-color: #28a745; // green
+    }
+
+    &.cancel button {
+        background-color: #dc3545; // red
+    }
+
+}
+
+
+.dal-select {
+    position: relative;
+
+    .input-div, input {
+        height: 17px;
+        font-size: 14px; // hard-coded for now
+
+        &:focus {
+            outline: none;
+        }
+
+        .down-arrow {
+            float: right;
+            padding-right: 2px;
+        }
+    }
+    .dal-select-content {
+        background-color: #fff; 
+        border-radius: 5px;
+        border: 1px solid #9e9e9e;
+        padding: 3px;
+        position: absolute;
+        z-index: 1;
+        width: 100%;  
+        width: -moz-available;
+        width: -webkit-fill-available;  
+        overflow-x: hidden;
+        left: 3px;
+        right: 0;
+
+        div {
+            padding: 5px;
+            &:hover {
+                background-color: #80ccff;
+            }
+        }
+    }
+}
+
+.dal-tooltip {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+
+    .tooltip {
+        visibility: hidden;
+        border: 1px solid #e5e5e5;
+        background-color: #efefef;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 125%;
+
+        opacity: 0;
+        transition: opacity 0.3s;
+        box-shadow: 1px 1px 1px #000;
+
+        transform: translateX(-20%);
+        width: inherit;
+
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* disabled select boxes */
+.disabled div {
+    background-color: #efefef;
+    cursor: not-allowed;
+}
+
+
+
+.dal-modal {
+    background-color: hsla(0, 0%, 25%, .75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .content {
+        background: #fff;
+        overflow: auto;
+        box-shadow: 1px 1px 1px #000;
+        padding: 10px;
+        transition: opacity 1s linear;
+
+        .close-x {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.dal-file-attacher {
+
+    .close-btn {
+            
+        &:hover {
+            cursor: pointer;
+        }
+    } 
+
+    .dal-button {
+        button {
+            &:disabled {
+                background-color: #efefef;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+
+/* loader */
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loader-overlay {
+    background-color: hsla(0, 0%, 25%, .75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-right: 16px solid #3498db;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  position: absolute;
+  top: 130px;
+  bottom: 200px;
+  left: 200px;
+  right: 200px;
+}
