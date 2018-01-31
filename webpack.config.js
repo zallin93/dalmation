@@ -22,18 +22,11 @@ setupVariables();
 
 module.exports = {
     entry: [
-        'react-hot-loader/patch', 
         './src/index.js'
     ],
     devtool: 'inline-source-map',
-    devServer: {
-        compress: true, 
-        port: 9000, 
-        hot: true
-    }, 
     plugins: [
-        new webpack.NamedModulesPlugin(), 
-        new webpack.HotModuleReplacementPlugin(), 
+        new webpack.NamedModulesPlugin(),
         new webpack.DefinePlugin({
         }), 
         new ExtractTextPlugin("styles.css")
