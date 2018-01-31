@@ -1,19 +1,14 @@
 {
   "name": "dalmation",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "custom components and utils",
+  "main": "dist/index.js",
   "scripts": {
     "test": "test",
-    "build": "NODE_ENV=local webpack --config webpack.production.config.js",
-    "build:dev": "NODE_ENV=dev webpack ",
-    "build:qa": "webpack",
-    "build:prod": "webpack --config webpack.production.config.js",
-    "server": "NODE_ENV=local webpack-dev-server --host localhost.gartner.com",
-    "server:windows": "webpack-dev-server --host localhost.gartner.com",
-    "server:prod": "webpack-dev-server --host localhost.gartner.com --config webpack.production.config.js"
+    "build": "webpack",
+    "prepublish": "npm run build"
   },
-  "author": "zachary.allin@gartner.com",
+  "author": "Zach Allin <zachary.allin@gartner.com>",
   "license": "ISC",
   "dependencies": {
     "babel-core": "6.26.0",
