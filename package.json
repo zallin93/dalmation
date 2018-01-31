@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "build": "webpack",
+    "build:watch": "webpack --watch", 
     "prepublish": "npm run build"
   },
   "author": "Zach Allin <zachary.allin@gartner.com>",
