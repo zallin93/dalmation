@@ -57,6 +57,7 @@ export default class FileAttacher extends React.Component {
                         this._handleAddFile(event.target.files)
                     }} accept={acceptedFileTypes} />
                 <SubhubButton onClickFunc={() => {
+                        this.inputElement.value = null;
                         this.inputElement.click();
                     }} disabled={fileArray.length >= maxFileCount} >{this.props.buttonLabel}</SubhubButton>
                 {

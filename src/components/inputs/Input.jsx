@@ -39,7 +39,7 @@ export default class Input extends React.Component {
         return (
             <div className={"dal-input" + classNamesString} >
                 <label >{label}{this._renderIfRequired()}</label>{this.props.children}
-                <input type="text" data-lpignore={true} disabled={disabled} maxLength={maxCharacterCount} required={isRequired} name={name} value={value} onChange={this.handleChange} />
+                <input type={this.props.type} data-lpignore={true} disabled={disabled} maxLength={maxCharacterCount} required={isRequired} name={name} value={value} onChange={this.handleChange} />
                 { 
                     this.props.showCharacterCount ?
                         <div style={{float: "right"}} >{charactersLeft}/{maxCharacterCount}</div>
@@ -59,7 +59,8 @@ Input.propTypes = {
     onInputChange: PropTypes.func.isRequired,
     showCharacterCount: PropTypes.bool,
     maxCharacterCount: PropTypes.number, 
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool, 
+    type: PropTypes.oneOf(['text', 'email', 'tel'])
 };
 
 Input.defaultProps = {
@@ -68,5 +69,6 @@ Input.defaultProps = {
     name: '',
     showCharacterCount: false, 
     maxCharacterCount: 500, 
-    disabled: false
+    disabled: false, 
+    type: 'text'
 };
