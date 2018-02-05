@@ -76,7 +76,10 @@ module.exports = {
     output: {
         filename: 'index.js', 
         path: path.resolve(__dirname, './dist'), 
-        publicPath: '/dist'
+        publicPath: '/dist', 
+        library: 'dalmation', 
+        libraryTarget: 'umd', 
+        umdNamedDefine: true
     }
 
 };

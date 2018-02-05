@@ -5,4 +5,8 @@ import Radio from 'src/components/inputs/Radio';
 import * as datetimeStyles from 'react-datetime/css/react-datetime.css';
 import styles from './styles/master.scss';
 
-export {Button, Input, Radio};
+module.exports = {
+    Button, 
+    Input, 
+    Radio
+};
