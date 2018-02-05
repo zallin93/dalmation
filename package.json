@@ -9,7 +9,7 @@
     "watch": "webpack --watch", 
     "prepublish": "npm run build"
   },
-  "author": "Zach Allin <zachary.allin@gartner.com>",
+  "author": "Zach Allin <zacharydallin@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "babel-core": "6.26.0",
